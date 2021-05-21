@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Driver from './components/Driver/Driver';
+import Team from './components/Team/Team';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = (props) => {
+    return (
+        <BrowserRouter>
+            <div className='app-wrapper'>
+                <Header />
+                <div className='app-wrapper-content'>
+                    <Route exact path='/' render={()=><h2>Добро пожаловать в мир Формулы 1</h2>} />
+                    <Route path='/drivers' component={Driver} />
+                    <Route path='/teams' component={Team} />
+                </div>
+            </div>
+        </BrowserRouter>
+    )
 }
 
 export default App;

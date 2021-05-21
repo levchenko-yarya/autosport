@@ -1,0 +1,15 @@
+.logo {
+    background-color: blue;
+}
+img {
+    width: 50px;
+}
+.item {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 30px;
+}
+.item:hover{
+    background-color:red;
+    color: black;
+}
