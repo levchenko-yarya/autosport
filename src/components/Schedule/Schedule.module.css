@@ -1,0 +1,15 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: "races tracks";
+    grid-template-columns: 2fr 5fr;
+}
+
+.races {
+    background-color: crimson;
+    grid-area: races;
+}
+
+.tracks {
+    background-color: blueviolet;
+    grid-area: tracks;
+}

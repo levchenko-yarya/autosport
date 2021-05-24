@@ -1,9 +1,10 @@
-import './App.css';
-import Header from './components/Header/Header';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Team from './components/Team/Team';
-import DriverList from './components/DriverList/DriverList';
-import Schedule from './components/Schedule/Schedule';
+import './App.css'
+import Header from './components/Header/Header'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Team from './components/Team/Team'
+import DriverList from './components/DriverList/DriverList'
+import Schedule from './components/Schedule/Schedule'
+import Standings from './components/Standings/Standings'
 
 const App = (props) => {
     return (
@@ -15,10 +16,11 @@ const App = (props) => {
                     <Route path='/drivers' component={DriverList} />
                     <Route path='/teams' component={Team} />
                     <Route path='/schedule' component={Schedule} />
+                    <Route path='/standings' component={Standings} />
                 </div>
             </div>
         </BrowserRouter>
     )
 }
 
-export default App;
+export default App

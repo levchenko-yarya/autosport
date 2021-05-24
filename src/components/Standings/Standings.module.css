@@ -1,0 +1,15 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: "driver team";
+    grid-template-columns: 1fr 1fr;
+}
+
+.driver {
+    background-color: darkorange;
+    grid-area: driver;
+}
+
+.team {
+    background-color: gold;
+    grid-area: team;
+}
