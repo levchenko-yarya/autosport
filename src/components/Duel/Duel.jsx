@@ -14,11 +14,11 @@ const Duel = () => {
     ]
     let duels = duelData.map(d =>
         <tr>
-            <th>{d.team}</th>
-            <th>{d.driver1}</th>
-            <th>{d.duel}</th>
-            <th>{d.driver2}</th>
-            <th>{d.difference}</th>
+            <td>{d.team}</td>
+            <td>{d.driver1}</td>
+            <td>{d.duel}</td>
+            <td>{d.driver2}</td>
+            <td>{d.difference}</td>
         </tr>
     )
 
@@ -27,11 +27,11 @@ const Duel = () => {
             <h3>Дуэли пилотов</h3>
             <table border='1'>
                 <tr>
-                    <th>команда</th>
-                    <th>пилот 1</th>
-                    <th>дуэль</th>
-                    <th>пилот 2</th>
-                    <th>разрыв</th>
+                    <th>Команда</th>
+                    <th>Пилот 1</th>
+                    <th>Дуэль</th>
+                    <th>Пилот 2</th>
+                    <th>Разрыв</th>
                 </tr>
                 {duels}
             </table>
