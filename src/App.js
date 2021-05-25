@@ -5,6 +5,7 @@ import Team from './components/Team/Team'
 import DriverList from './components/DriverList/DriverList'
 import Schedule from './components/Schedule/Schedule'
 import Standings from './components/Standings/Standings'
+import Duel from './components/Duel/Duel'
 
 const App = (props) => {
     return (
@@ -17,6 +18,7 @@ const App = (props) => {
                     <Route path='/teams' component={Team} />
                     <Route path='/schedule' component={Schedule} />
                     <Route path='/standings' component={Standings} />
+                    <Route path='/duels' component={Duel} />
                 </div>
             </div>
         </BrowserRouter>
