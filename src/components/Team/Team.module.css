@@ -1,0 +1,11 @@
+.team {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.team img {
+    height: 100%;
+    width: 200px;
+}

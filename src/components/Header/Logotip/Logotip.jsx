@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import l from './Logotip.module.css'
 
 const Logotip = () => {
