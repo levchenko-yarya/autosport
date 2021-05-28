@@ -1,6 +1,11 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .team {
     display: flex;
-    width: 1000px;
+    width: 400px;
     margin: 0 auto;
     border: 1px solid red;
 }

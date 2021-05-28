@@ -1,4 +1,5 @@
 import Driver from "./Driver/Driver";
+import d from './DriverList.module.css'
 
 const DriverList = () => {
 
@@ -29,7 +30,7 @@ const DriverList = () => {
         <Driver name={d.name}/>
     )
     return (
-        <div>
+        <div className={d.wrapper}>
             {drivers}
         </div>
     )

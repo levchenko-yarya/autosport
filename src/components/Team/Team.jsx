@@ -23,7 +23,7 @@ const Team = () => {
     )
 
     return (
-        <div>
+        <div className={team.wrapper}>
             {teams}
         </div>
     )
