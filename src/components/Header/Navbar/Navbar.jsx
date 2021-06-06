@@ -17,7 +17,7 @@ const Navbar = (props) => {
                 <NavLink to='/standings' activeClassName={n.activeLink}>Standings (турнирная таблица)</NavLink>
             </div>
             <div className={`${n.item} ${n.active}`}>
-                <NavLink to='/duels' activeClassName={n.activeLink}>Duels (дуэли)</NavLink>
+                <NavLink to='/duels' activeClassName={n.activeLink}>Duels (дуэли квалификации)</NavLink>
             </div>
         </div>
     )
