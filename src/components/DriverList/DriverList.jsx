@@ -1,9 +1,9 @@
 import Driver from "./Driver/Driver";
 import d from './DriverList.module.css'
 
-const DriverList = () => {
+const DriverList = (props) => {
 
-    let driversData = [
+   /* let driversData = [
         {id: 1, name: 'Льюис Хемильтон'},
         {id: 2, name: 'Макс Ферстаппен'},
         {id: 3, name: 'Валлтери Боттас'},
@@ -24,9 +24,9 @@ const DriverList = () => {
         {id: 18, name: 'Николас Латифи'},
         {id: 19, name: 'Мик Шумахер'},
         {id: 20, name: 'Никита Мазепин'}
-    ]
+    ]*/
 
-    let drivers = driversData.map(d =>
+    let drivers = props.driverPage.drivers.map(d =>
         <Driver name={d.name}/>
     )
     return (
