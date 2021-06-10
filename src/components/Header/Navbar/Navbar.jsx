@@ -5,6 +5,9 @@ const Navbar = (props) => {
     return (
         <div className={n.nav}>
             <div className={`${n.item} ${n.active}`}>
+                <NavLink to='/news' activeClassName={n.activeLink}>News (новости)</NavLink>
+            </div>
+            <div className={`${n.item} ${n.active}`}>
                 <NavLink to='/drivers' activeClassName={n.activeLink}>Drivers (пилоты)</NavLink>
             </div>
             <div className={`${n.item} ${n.active}`}>
