@@ -1,6 +1,7 @@
 import './App.css'
 import {BrowserRouter, Route} from 'react-router-dom'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts'
+import TeamPieChart from "./components/TeamPieChart";
 import Header from './components/Header/Header'
 import Team from './components/Team/Team'
 import DriverList from './components/DriverList/DriverList'
@@ -29,18 +30,20 @@ const data = [
 
 const SimpleLineChart = () => {
     return (
-        <LineChart width={1200} height={500} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-            <XAxis dataKey="name"/>
-            <YAxis/>
-            <CartesianGrid strokeDasharray="3 3"/>
-            <Tooltip/>
-            <Legend/>
-            <Line type="monotone" dataKey="Хемильтон" stroke="blue" activeDot={{r: 5}}/>
-            <Line type="monotone" dataKey="Ферстаппен" stroke="red"/>
-        </LineChart>
+        <div>
+            <h3>Противостояние двух гонщиков: Хемильтона и Ферстаппена</h3>
+            <LineChart width={1200} height={500} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+                <XAxis dataKey="name"/>
+                <YAxis/>
+                <CartesianGrid strokeDasharray="3 3"/>
+                <Tooltip/>
+                <Legend/>
+                <Line type="monotone" dataKey="Хемильтон" stroke="blue" activeDot={{r: 5}}/>
+                <Line type="monotone" dataKey="Ферстаппен" stroke="red"/>
+            </LineChart>
+        </div>
     )
 }
-
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -52,6 +55,7 @@ const App = (props) => {
                             <h2>Добро пожаловать в мир Формулы-1</h2>
                             <p>эта страница будет посвящена миру Формулы-1, а возможно и всему автоспорту.</p>
                             <SimpleLineChart/>
+                            <TeamPieChart/>
                         </div>
                     }/>
                     <Route path='/news' render={() => <NewsList/>}/>
