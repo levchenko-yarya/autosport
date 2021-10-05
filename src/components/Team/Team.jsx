@@ -1,4 +1,5 @@
 import team from './Team.module.css'
+import TeamChart from "../Chart/TeamChart";
 
 const Team = (props) => {
     let teams = props.teamPage.teams.map(t =>
@@ -9,9 +10,13 @@ const Team = (props) => {
     )
 
     return (
-        <div className={team.wrapper}>
-            {teams}
-        </div>
+        <>
+            <div className={team.wrapper}>
+                {teams}
+            </div>
+            <TeamChart/>
+        </>
+
     )
 }
 
