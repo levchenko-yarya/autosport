@@ -1,3 +1,5 @@
+import Rating from "../Rating/Rating";
+
 const Duel = (props) => {
     let duels = props.duelPage.duels.map(d =>
         <tr>
@@ -22,6 +24,7 @@ const Duel = (props) => {
                 </tr>
                 {duels}
             </table>
+            <Rating/>
         </div>
     )
 }
