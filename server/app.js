@@ -27,7 +27,8 @@ app.use(
 
 app.use('/team', teamRouter)
 app.use('/driver', driverRouter)
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server is starting on ${process.env.PORT} port`)
+app.use('/', (req, res)=> {
+    res.render('index.hbs')
 })
+
+module.exports = app
