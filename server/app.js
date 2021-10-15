@@ -5,8 +5,8 @@ const cors = require('cors')
 const { graphqlHTTP } = require('express-graphql')
 const schema = require('./schema')
 
-const driverController = require('./driver/driver.controller')
-const teamController = require('./team/team.controller')
+const driverRouter = require('./driver/driver.router')
+const teamRouter = require('./team/team.router')
 
 const app = express()
 app.use(cors())
@@ -25,9 +25,9 @@ app.use(
     })
 )
 
-app.use('/team', teamController.get)
-app.use('/', driverController.get)
+app.use('/team', teamRouter)
+app.use('/driver', driverRouter)
 
 app.listen(process.env.PORT, () => {
-    console.log('Server is starting')
+    console.log(`Server is starting on ${process.env.PORT} port`)
 })
