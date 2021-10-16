@@ -8,6 +8,7 @@ const schema = require('./schema')
 
 const driverRouter = require('./driver/driver.router')
 const teamRouter = require('./team/team.router')
+const scheduleRouter = require('./schedule/schedule.router')
 
 const app = express()
 app.use(cors())
@@ -29,6 +30,7 @@ app.use(
 
 app.use('/team', teamRouter)
 app.use('/driver', driverRouter)
+app.use('/schedule', scheduleRouter)
 app.use('/', (req, res) => {
     res.render('index.hbs')
 })
