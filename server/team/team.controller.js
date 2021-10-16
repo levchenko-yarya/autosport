@@ -20,5 +20,5 @@ exports.store = (req, res) => {
         teamName: req.body.teamName
     })
     team.save()
-    res.redirect('/team')
+    res.redirect('/')
 }

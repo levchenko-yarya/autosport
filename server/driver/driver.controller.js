@@ -20,5 +20,5 @@ exports.store = (req, res) => {
         fullname: req.body.fullname
     })
     driver.save()
-    res.redirect('/driver')
+    res.redirect('/')
 }

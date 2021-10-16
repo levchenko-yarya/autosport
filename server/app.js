@@ -1,8 +1,9 @@
 require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const cors = require('cors')
-const { graphqlHTTP } = require('express-graphql')
+const {graphqlHTTP} = require('express-graphql')
 const schema = require('./schema')
 
 const driverRouter = require('./driver/driver.router')
@@ -10,6 +11,7 @@ const teamRouter = require('./team/team.router')
 
 const app = express()
 app.use(cors())
+app.use(bodyParser.urlencoded({extended: false}))
 app.set('view engine', 'hbs')
 
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
@@ -27,7 +29,7 @@ app.use(
 
 app.use('/team', teamRouter)
 app.use('/driver', driverRouter)
-app.use('/', (req, res)=> {
+app.use('/', (req, res) => {
     res.render('index.hbs')
 })
 
