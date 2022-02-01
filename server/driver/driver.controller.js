@@ -15,7 +15,9 @@ exports.get = (req, res) => {
     })
 }
 
-exports.add = (req, res) => {res.render('driver/add.hbs')}
+exports.add = (req, res) => {
+    res.render('driver/add.hbs')
+}
 
 exports.store = (req, res) => {
     const driver = new Driver({fullname: req.body.fullname})
