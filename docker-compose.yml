@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   db:
     image: mysql:5.7
     restart: unless-stopped
@@ -14,6 +15,8 @@ services:
         - $MYSQL_LOCAL_PORT:$MYSQL_DOCKER_PORT
       volumes:
         - ./database:/var/lib/mysql
+    networks:
+      - internal
 
   server:
     depends_on:
@@ -34,6 +37,11 @@ services:
         - DB_PORT=${MYSQL_DOCKER_PORT}
       stdin_open: true
       tty: true
+    networks:
+      - internal
 
 volumes:
   db:
+
+networks:
+  internal:
